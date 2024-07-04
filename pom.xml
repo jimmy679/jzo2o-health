@@ -50,6 +50,7 @@
             <scope>test</scope>
         </dependency>
 
+
         <dependency>
             <groupId>com.jzo2o</groupId>
             <artifactId>jzo2o-api</artifactId>

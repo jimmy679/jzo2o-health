@@ -4,7 +4,6 @@ import com.jzo2o.api.publics.MapApi;
 import com.jzo2o.api.publics.dto.response.LocationResDTO;
 import com.jzo2o.health.model.domain.ReservationSetting;
 import com.jzo2o.health.model.dto.response.SetmealDetailResDTO;
-import com.jzo2o.health.service.IReservationSettingService;
 import com.jzo2o.health.service.ISetmealService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

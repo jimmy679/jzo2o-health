@@ -28,6 +28,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public User findByUsername(String username) {
         LambdaQueryWrapper<User> queryWrapper = Wrappers.<User>lambdaQuery().eq(User::getUsername, username);
-        return super.getOne(queryWrapper);
+        return super.baseMapper.selectOne(queryWrapper);
+//        return super.getOne(queryWrapper);
     }
 }
