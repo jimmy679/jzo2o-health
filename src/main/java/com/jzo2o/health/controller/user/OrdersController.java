@@ -4,6 +4,7 @@ import com.jzo2o.api.trade.enums.PayChannelEnum;
 import com.jzo2o.health.model.dto.request.PlaceOrderReqDTO;
 import com.jzo2o.health.model.dto.response.OrdersPayResDTO;
 import com.jzo2o.health.model.dto.response.PlaceOrderResDTO;
+import com.jzo2o.health.service.IOrdersService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -20,10 +21,14 @@ import javax.annotation.Resource;
 @Api(tags = "用户端 - 下单支付相关接口")
 public class OrdersController {
 
+
+    @Resource
+    private IOrdersService ordersService;
     @ApiOperation("下单接口")
     @PostMapping("/place")
     public PlaceOrderResDTO place(@RequestBody PlaceOrderReqDTO placeOrderReqDTO) {
-        return null;
+        PlaceOrderResDTO placeOrderResDTO = ordersService.place(placeOrderReqDTO);
+        return placeOrderResDTO;
     }
 
     @PutMapping("/pay/{id}")

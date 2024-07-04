@@ -11,4 +11,9 @@ public class RedisConstants {
      * 用户端订单滚动分页查询
      */
     public static final String ORDER_PAGE_QUERY = "ORDERS:PAGE_QUERY:PAGE_%s";
+    /**
+     * 订单ID前缀
+     */
+    public static final String ORDERS_SHARD_KEY_ID_GENERATOR = "ORDERS:SHARD_KEY:GENERATOR";
+
 }
